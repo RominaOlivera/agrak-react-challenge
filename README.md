@@ -28,19 +28,21 @@ Make sure you have Node.js and npm (Node Package Manager) installed on your syst
 ## Project Structure
 
 - `src/`: Contains the source code of the application.
-  - `components/`: 
-    - `Home.tsx`: Component for displaying the home view, including user list and navigation buttons.
-    - `UpdateUser.tsx`: Component for updating user details.
-    - `CreateUser.tsx`: Component for creating a new user.
-    - `UserCard.tsx`: Component that represents a user card displaying user details.
-    - `Modal.tsx`: Component for displaying confirmation modals.
-    - `Pagination.tsx`: Component for handling pagination of user list.
-  - `hooks/`: 
-    - `useFormValidation.ts`: Custom hook for form validation.
-  - `styles/`: Contains project styles.
-    - `main.scss`: Sass file with global styles and imports.
+  - `components/`: Contains reusable UI components.
+    - `Home.tsx`: Displays the home view, including user list and navigation buttons.
+    - `UpdateUser.tsx`: Allows updating user details.
+    - `CreateUser.tsx`: Provides a form for creating a new user.
+    - `UserCard.tsx`: Represents a user card that displays user details.
+    - `Modal.tsx`: Handles confirmation modals and other dialogs.
+    - `Pagination.tsx`: Manages pagination for the user list.
+  - `hooks/`: Contains custom React hooks.
+    - `useFormValidation.tsx`: Provides form validation logic and rules.
+    - `useForm.tsx`: Manages form state and interactions.
+  - `styles/`: Contains the styling for the project.
+    - `main.scss`: Sass file with global styles and imports, including variables, mixins, and component styles.
   - `App.tsx`: Main component that sets up routing and renders the application.
-  - `index.tsx`: Entry point of the application that renders `App`.
+  - `index.tsx`: Entry point of the application that renders the `App` component.
+
 
 ## Create User View / Update User View
 
