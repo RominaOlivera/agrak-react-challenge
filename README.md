@@ -85,6 +85,6 @@ The Create User and Update User views include the following elements:
 
 
 ## Deploy
-My user panel is available online. You can access it through the following link: 
+My user panel is available online. You can access it through the following link: [My user panel](https://myuserpanel.vercel.app/)
 
 
