@@ -1,15 +1,18 @@
-import { useAppDispatch, useAppSelector } from "../redux/hooks";
-import { changeMessage, selectMessage } from "../redux/slices/basicSlice";
-import "./App.css";
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from '../components/home';
+import CreateUser from '../components/createUser';
+import UpdateUser from '../components/updateUser';
 
 function App() {
-  const message = useAppSelector(selectMessage);
-  const dispatch = useAppDispatch();
-
   return (
-    <div>
-      <h1>{message}</h1>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/create" element={<CreateUser />} />
+        <Route path="/update/:id" element={<UpdateUser />} />
+        <Route path="/delete/:id" />
+      </Routes>
+    </Router>
   );
 }
 

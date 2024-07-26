@@ -1,63 +1,90 @@
-# React Code Challenge — Agrak
+# My User Panel
 
-Using the provided project structure and the provided API, create a simple web application that allows to manage a list
-of users.
+My User Panel is a web application designed to efficiently manage users. It allows for creating, editing, deleting, and viewing users.
 
-## Details
 
-You will need to build the following views with React
+## Facility
 
-#### Home View
+Make sure you have Node.js and npm (Node Package Manager) installed on your system.
 
-Which must contain:
+1. Clone this repository to your computer:
+   git clone https://github.com/RominaOlivera/agrak-react-challenge.git
 
-- A list of users showing their first_name, second_name, email, avatar
-- A button to add a new user (this button should redirect to the user creation view)
-- A button to edit an existing user (this button should redirect to the user edition view)
-- A button to delete an existing user (this button should delete the user and refresh the list)
+2. Navigate to the project directory:
+   cd agrak-react-challenge
 
-#### Create User View/Update User View
+3. Install the necessary dependencies:
+   npm install
 
-Which must contain:
+## Use
 
-- A form to create a new user or update an existing user
-- A button to save the user (this button should save the user and redirect to the home view)
-- A button to cancel the action (this button should redirect to the home view)
-- A button to delete the user (only in the update view) (this button should delete the user and redirect to the home
-  view)
-- A button to go back to the home view
-- The form must have the following fields:
-    - first_name
-    - second_name
-    - email
-    - avatar
+1. To run the application in development mode, use the following command:
+   npm run start
+
+2. Open your browser and navigate to the address http://localhost:3000/
+
+3. Interact with the application to efficiently manage users.
+
+## Project Structure
+
+- `src/`: Contains the source code of the application.
+  - `components/`: 
+    - `Home.tsx`: Component for displaying the home view, including user list and navigation buttons.
+    - `UpdateUser.tsx`: Component for updating user details.
+    - `CreateUser.tsx`: Component for creating a new user.
+    - `UserCard.tsx`: Component that represents a user card displaying user details.
+    - `Modal.tsx`: Component for displaying confirmation modals.
+    - `Pagination.tsx`: Component for handling pagination of user list.
+  - `hooks/`: 
+    - `useFormValidation.ts`: Custom hook for form validation.
+  - `styles/`: Contains project styles.
+    - `main.scss`: Sass file with global styles and imports.
+  - `App.tsx`: Main component that sets up routing and renders the application.
+  - `index.tsx`: Entry point of the application that renders `App`.
+
+## Create User View / Update User View
+
+The Create User and Update User views include the following elements:
+
+- **Form**: A form to create a new user or update an existing user with the following fields:
+  - `first_name`: Field to input the user's first name.
+  - `second_name`: Field to input the user's second name.
+  - `email`: Field to input the user's email address.
+  - `avatar`: Field to input the URL of the user's avatar image.
+
+- **Save Button**: 
+  - Action: Saves the user (whether new or updated).
+  - Behavior: Redirects to the home view upon saving.
+
+- **Cancel Button**: 
+  - Action: Cancels the current action.
+  - Behavior: Redirects to the home view. A confirmation prompt is shown if there are unsaved changes.
+
+- **Delete Button** (Available only in the Update User view):
+  - Action: Deletes the user.
+  - Behavior: Redirects to the home view after deletion.
+
+- **Back to Home Button**:
+  - Action: Redirects to the home view.
+  - Behavior: Returns to the home view without saving changes.
 
 ## Technical details
 
-We will not evaluate the design of the application, but we will evaluate the code quality, so we suggest to follow
-software engineering best practices that demonstrate that you are able to develop high-quality software.
+- **Used technology**:
+  - **TypeScript**: For safer and more robust programming.
+  - **React Query**: For managing the state of the data and handling HTTP requests.
+  - **React Router**: For route management and navigation between views.
+  - **Axios**: For making HTTP requests.
+  - **Bootstrap** and **Sass**: For the design and stylization of the application.
 
-- You *must* use Typescript
-- You can use any CSS framework you want
-- You *must* use React Query as a State management library
-- You can use any routing library you want
-- You can use any HTTP client library you want
-
-#### Functional requirements
-
-- You will have to configure routes to navigate between the views and to be able to access them directly by the URL.
-- You will have to use the provided API to fetch the users and to create/update/delete them.
-- Any updates to the users must be reflected in the home view.
 
 ## Api
 
-The API endpoint is [Api user](https://635017b9df22c2af7b630c3e.mockapi.io/api/v1/users).
+  - [Api user](https://635017b9df22c2af7b630c3e.mockapi.io/api/v1/users) for user management (create, read, update, delete).
 
-![img_1.png](img_1.png)
 
-## Delivery
 
-The only deliverable is a link to a public repository with the code of the application. You can use any repository
-hosting service you want (Github, Gitlab, Bitbucket, etc.)
+## Deploy
+My user panel is available online. You can access it through the following link: 
 
-### Feel free to edit this README file to add any information you consider relevant to the solution.
+

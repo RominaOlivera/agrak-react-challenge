@@ -1,0 +1,18 @@
+@mixin border-radius($radius) {
+  border-radius: $radius;
+}
+
+@mixin responsive-font($default-size, $small-size) {
+  font-size: $default-size;
+
+  @media (max-width: 768px) {
+    font-size: $small-size;
+  }
+}
+@mixin responsive-font($desktop, $mobile) {
+  font-size: $desktop;
+
+  @media (max-width: 768px) {
+    font-size: $mobile;
+  }
+}

@@ -1,0 +1,208 @@
+@import 'variables';
+@import 'mixins'; 
+
+// General Styles
+body {
+  height: 100%;
+  margin: 0;
+  background: $primary-color;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: $font-family;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; 
+
+}
+
+// List Group
+.list-group {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+#team {
+  .list-group-item {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    background-color: $secondary-color;
+    border: $border-color;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  .avatar {
+    width: $avatar-size;
+    height: $avatar-size;
+    border: 2px solid $border-color;
+    padding: 3px;
+  }
+
+  .user-details {
+    flex-grow: 1;
+    margin-left: 0.5rem;
+    @include responsive-font($font-size-lg, $font-size-md);
+  
+    h5 {
+      font-family: $font-family;
+      font-weight: 700;
+      color: $primary-color;
+  
+      @include responsive-font($font-size-lg, $font-size-md);
+  
+      @media (max-width: 768px) {
+        width: 180px !important;
+      }
+    }
+  
+    p {
+      font-weight: 400;
+      color: $primary-color;
+      @include responsive-font($font-size-sm, $font-size-xs);
+      @media (max-width: 768px) {
+        white-space: nowrap;
+        overflow: hidden;       
+        text-overflow: ellipsis;  
+        max-width: 150px;      
+      }
+    }
+  }
+  
+  .action-icons {
+    display: flex;
+    align-items: center;
+    position: absolute; 
+    right: 1rem; 
+    top: 50%; 
+    transform: translateY(-50%); 
+
+    .p-2 {
+      color: #007bff;
+      font-size: 1.2rem;
+
+      &:hover {
+        color: #0056b3;
+      }
+    }
+  }
+}
+
+// Header
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.title-wrapper {
+  flex: 1;
+  text-align: center;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 45px;
+  @include responsive-font(45px, 40px);
+}
+
+// Buttons
+.button-color {
+  background-color: $secondary-color;
+  color: $primary-color;
+  font-weight: 700;
+
+  &:hover {
+    background-color: $hover-color !important;
+  }
+}
+
+.button-color-form {
+  background-color: #031b3f;
+  color: $secondary-color;
+
+  &:hover {
+    background-color: $hover-color !important;
+  }
+}
+
+// Forms
+.card {
+  background-color: $secondary-color;
+  max-width: 600px;
+  width: 100%;
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.input-field {
+  display: flex;
+  flex-direction: column;
+  padding: 0 10px;
+}
+
+.input {
+  background-color: $hover-color !important;
+  margin-bottom: 10px;
+}
+
+.text-form {
+  color: $primary-color;
+}
+
+.color-label {
+  color: #031b3f;
+  font-size: 16px;
+}
+
+.avatar-form {
+  margin-top: -100px;
+}
+
+.error-message {
+  color: rgb(245, 52, 52);
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+// Icons
+.bi {
+  font-size: 22px;
+
+  @media (max-width: 768px) {
+    font-size: 18px;
+  }
+}
+
+.bi-pencil {
+  color: $primary-color;
+}
+
+.bi-del {
+  &:hover {
+    color: #0056b3;
+  }
+}
+
+.bi-trash3 {
+  color: #ab1d4e;
+}
